@@ -85,7 +85,7 @@ function animaModal() {
       const servicoTop = servico.getBoundingClientRect().top;
       if (servicoTop <= 80) {
         modal.classList.add("ativo");
-        console.log(servicoTop);
+        // console.log(servicoTop);
       }
     }
   }
@@ -98,17 +98,17 @@ animaModal();
 
 function initMenuMobile() {
 
-    const menuButton = document.querySelector('[data-menu="button"]');
-    const menuList = document.querySelector('[data-menu="list"]');
-    const eventos = ['click', 'touchstart'];
+  const menuButton = document.querySelector('[data-menu="button"]');
+  const menuList = document.querySelector('[data-menu="list"]');
+  const eventos = ['click', 'touchstart'];
 
-    eventos.forEach((evento)=>{
-        menuButton.addEventListener(evento, openMenu);
-    })
+  eventos.forEach((evento) => {
+    menuButton.addEventListener(evento, openMenu);
+  })
 
-    function openMenu() {
-        menuButton.classList.toggle('ativo');
-        menuList.classList.toggle('ativo');
-    }
+  function openMenu() {
+    menuButton.classList.toggle('ativo');
+    menuList.classList.toggle('ativo');
+  }
 }
 initMenuMobile();
