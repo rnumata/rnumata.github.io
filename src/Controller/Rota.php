@@ -6,7 +6,7 @@ namespace email_php\src\Controller;
 
 require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
-const EMAIL_DESTINO = 'eliseuvidal64@gmail.com'; // AQUI VAI O ENDEREÇO DE EMAIL DA SUA ESPOSA PRA RECEBER OS CTT
+const EMAIL_DESTINO = 'marcia.bnumata@gmail.com'; // AQUI VAI O ENDEREÇO DE EMAIL PARA RECEBER OS CTT
 
 if (!empty(filter_input(INPUT_GET, 'acao')) && filter_input(INPUT_GET, 'acao') === 'enviar') {
     $dados = [
