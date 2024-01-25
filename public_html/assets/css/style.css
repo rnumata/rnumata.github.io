@@ -6,13 +6,15 @@ body {
 
 img {
   display: block;
-  max-width: 100%; /* IMPORTANTE: faz parte do responsivo. É para a imagem caber no tamanho dos containeres  */
+  max-width: 100%;
+  /* IMPORTANTE: faz parte do responsivo. É para a imagem caber no tamanho dos containeres  */
 }
 
 .subtitulo {
   text-align: center;
   font-family: Helvetica;
-  font-size: 1.875em; /* 30px/16 = 1.875em */
+  font-size: 1.875em;
+  /* 30px/16 = 1.875em */
   font-weight: bold;
   letter-spacing: 2px;
   color: black;
@@ -44,6 +46,22 @@ img {
   color: #a9aeb3;
 }
 
+.c-loader {
+  animation: is-rotating 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 50px;
+  width: 50px;
+  display: none;
+}
+
+@keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media (max-width: 739px) {
   .subtitulo {
     font-size: 26px;
@@ -58,7 +76,8 @@ img {
   width: 100%;
   padding: 15px 0;
   background: white;
-  z-index: 10; /* + importante para header fixo. Faz ficar por cima de tudo qdo scrolling */
+  z-index: 10;
+  /* + importante para header fixo. Faz ficar por cima de tudo qdo scrolling */
 }
 
 .nav_menu {
@@ -150,7 +169,7 @@ img {
 
 .introducao {
   max-width: 100%;
-  background: url("bg-intro.jpg") no-repeat center;
+  background: url("../img/bg-intro.jpg") no-repeat center;
   background-size: cover;
   margin-top: 83px;
   padding: 250px 0;
@@ -189,13 +208,16 @@ img {
   .introducao {
     padding: 180px 0;
   }
+
   .introducao h1 {
     font-size: 40px;
     margin-top: 90px;
   }
+
   .introducao p {
     font-size: 20px;
   }
+
   .introducao h2 {
     font-size: 23px;
     line-height: 35px;
@@ -205,7 +227,7 @@ img {
 /* Descricao */
 
 .descricao {
-  background: url("bg-site.png");
+  background: url("../img/bg-site.png");
   padding: 120px 0;
 }
 
@@ -302,10 +324,12 @@ img {
   .faixa_area {
     height: 520px;
   }
+
   .area_direito {
     font-size: 25px;
     line-height: 30px;
   }
+
   .desc_area {
     font-size: 16px;
     line-height: 20px;
@@ -458,16 +482,19 @@ img {
   box-shadow: 0 0 0 10px white;
   position: relative;
 }
+
 @keyframes mostrarModal {
   from {
     opacity: 0;
     transform: translate3d(0, -30px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 }
+
 .ativo .modal {
   animation: mostrarModal 0.7s forwards;
 }
@@ -518,12 +545,14 @@ img {
 [data-slide] {
   position: relative;
 }
-[data-slide] > * {
+
+[data-slide]>* {
   position: absolute;
   top: 0px;
   opacity: 0;
 }
-[data-slide] > .active {
+
+[data-slide]>.active {
   position: relative;
   opacity: 1;
   transition: opacity 4000ms;
@@ -578,6 +607,7 @@ img {
     opacity: 0;
     transform: translate3d(0, -10px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
